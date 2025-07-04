@@ -4,7 +4,7 @@ async function predictProfit() {
     const administration = parseFloat(document.getElementById('administration').value);
     const marketing_spend = parseFloat(document.getElementById('marketing_spend').value);
 
-    const response = await fetch('YOUR_RENDER_BACKEND_URL/predict', {
+    const response = await fetch('https://profit-prediction-backend.onrender.com/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ rd_spend, administration, marketing_spend })
